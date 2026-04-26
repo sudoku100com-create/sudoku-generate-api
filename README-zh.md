@@ -1,6 +1,6 @@
 # Sudoku API
 
-![Sudoku API](https://www.sudoku100.com/sudoku-img?width=800&format=png)
+![Sudoku API](https://www.sudoku100.com/sudoku-img?width=800\&format=png)
 
 一个无需注册、无需 API 密钥的公共数独生成 API，类似于 picsum photos。
 
@@ -25,6 +25,7 @@
 ## 快速开始
 
 ### 基本用法
+
 ```
 https://www.sudoku100.com/sudoku-img
 ```
@@ -35,6 +36,7 @@ https://www.sudoku100.com/sudoku-img
 "生成一个中等难度的数独谜题图片，使用 Sudoku100 API"
 
 **API 调用：**
+
 ```
 https://www.sudoku100.com/sudoku-img/medium
 ```
@@ -42,30 +44,33 @@ https://www.sudoku100.com/sudoku-img/medium
 ## API 端点
 
 ### 1. 动态数独
+
 - **URL:** `https://www.sudoku100.com/sudoku-img`
 - **描述:** 生成随机难度的数独谜题
 - **特点:** 实时生成，唯一解保证
 - **示例:** `https://www.sudoku100.com/sudoku-img`
 
-![动态数独](https://www.sudoku100.com/sudoku-img?width=400&format=png)
+![动态数独](https://www.sudoku100.com/sudoku-img?width=400\&format=png)
 
 ### 2. 指定难度
+
 - **URL:** `https://www.sudoku100.com/sudoku-img/{difficulty}`
 - **参数:**
   - `difficulty`: 难度级别 (beginner, easy, medium, hard, expert, extreme)
 - **特点:** 精确控制难度，适合不同水平的用户
 - **示例:** `https://www.sudoku100.com/sudoku-img/hard`
 
-| 难度 | 示例 |
-|------|------|
-| 初学者 | ![初学者](https://www.sudoku100.com/sudoku-img/beginner?width=200&format=png) |
-| 简单 | ![简单](https://www.sudoku100.com/sudoku-img/easy?width=200&format=png) |
-| 中等 | ![中等](https://www.sudoku100.com/sudoku-img/medium?width=200&format=png) |
-| 困难 | ![困难](https://www.sudoku100.com/sudoku-img/hard?width=200&format=png) |
-| 专家 | ![专家](https://www.sudoku100.com/sudoku-img/expert?width=200&format=png) |
-| 极端 | ![极端](https://www.sudoku100.com/sudoku-img/extreme?width=200&format=png) |
+| 难度  | 示例                                                                          |
+| --- | --------------------------------------------------------------------------- |
+| 初学者 | ![初学者](https://www.sudoku100.com/sudoku-img/beginner?width=200\&format=png) |
+| 简单  | ![简单](https://www.sudoku100.com/sudoku-img/easy?width=200\&format=png)      |
+| 中等  | ![中等](https://www.sudoku100.com/sudoku-img/medium?width=200\&format=png)    |
+| 困难  | ![困难](https://www.sudoku100.com/sudoku-img/hard?width=200\&format=png)      |
+| 专家  | ![专家](https://www.sudoku100.com/sudoku-img/expert?width=200\&format=png)    |
+| 极端  | ![极端](https://www.sudoku100.com/sudoku-img/extreme?width=200\&format=png)   |
 
 ### 3. 自定义尺寸和格式
+
 - **URL:** `https://www.sudoku100.com/sudoku-img?width={width}&format={format}`
 - **参数:**
   - `width`: 图片宽度 (100-1000)
@@ -73,72 +78,87 @@ https://www.sudoku100.com/sudoku-img/medium
 - **特点:** 自定义生成数独的尺寸和格式
 - **示例:** `https://www.sudoku100.com/sudoku-img?width=800&format=png`
 
-![自定义尺寸](https://www.sudoku100.com/sudoku-img?width=600&format=png)
+![自定义尺寸](https://www.sudoku100.com/sudoku-img?width=600\&format=png)
 
 ### 4. 按 ID 获取
+
 - **URL:** `https://www.sudoku100.com/id/{id}`
 - **参数:**
   - `id`: 数独谜题 ID (1-10000)
 - **特点:** 通过 ID 获取相同的数独谜题
 - **示例:** `https://www.sudoku100.com/id/238`
 
-![谜题编号 238](https://www.sudoku100.com/id/238?width=400&format=png)
+![谜题编号 238](https://www.sudoku100.com/id/238?width=400\&format=png)
 
 ## 大模型应用示例
 
 ### 示例 1: 随机数独
+
 **提示词:** "生成一个随机数独谜题"
 **API 调用:** `https://www.sudoku100.com/sudoku-img`
 
 ### 示例 2: 专家级
+
 **提示词:** "我需要今天的专家级难度数独挑战"
 **API 调用:** `https://www.sudoku100.com/sudoku-img/expert`
 
 ### 示例 3: 入门级
+
 **提示词:** "我女儿8岁，给她看一个简单的数独"
 **API 调用:** `https://www.sudoku100.com/sudoku-img/easy`
 
 ### 示例 4: 中等难度
+
 **提示词:** "给我一个中等难度的数独来打发时间"
 **API 调用:** `https://www.sudoku100.com/sudoku-img/medium`
 
 ### 示例 5: 困难挑战
+
 **提示词:** "我想要一个需要花几小时才能解的困难数独"
 **API 调用:** `https://www.sudoku100.com/sudoku-img/hard`
 
 ### 示例 6: 自定义 PNG 尺寸
+
 **提示词:** "我需要一个1000px宽的PNG数独作为网站英雄区"
 **API 调用:** `https://www.sudoku100.com/sudoku-img?width=1000&format=png`
 
 ### 示例 7: SVG 格式
+
 **提示词:** "为我的设计项目生成一个矢量SVG数独"
 **API 调用:** `https://www.sudoku100.com/sudoku-img?width=500&format=svg`
 
 ### 示例 8: 极限挑战
+
 **提示词:** "只有最极限的数独才够，我是速解选手"
 **API 调用:** `https://www.sudoku100.com/sudoku-img/extreme`
 
 ### 示例 9: 特定谜题 ID
+
 **提示词:** "加载编号500的谜题，我朋友上周解过"
 **API 调用:** `https://www.sudoku100.com/id/500`
 
 ### 示例 10: 嵌入互动游戏
+
 **提示词:** "在我的教育网站上添加一个互动数独游戏"
 **API 调用:** `<iframe src="https://www.sudoku100.com/embed/interactive"></iframe>`
 
 ### 示例 11: 带解题方案
+
 **提示词:** "生成一个数独并显示答案，以便我检查"
 **API 调用:** `https://www.sudoku100.com/sudoku-solver?id=100`
 
 ### 示例 12: 打印友好
+
 **提示词:** "生成一个高分辨率数独，我可以打印出来在上班路上解"
 **API 调用:** `https://www.sudoku100.com/sudoku-img?width=800&format=png`
 
 ### 示例 13: 每日挑战
+
 **提示词:** "给我今天的中等难度每日数独挑战"
 **API 调用:** `https://www.sudoku100.com/sudoku-img/medium`
 
 ### 示例 14: WebP 格式优化性能
+
 **提示词:** "我需要一个轻量级的WebP格式数独以实现快速加载"
 **API 调用:** `https://www.sudoku100.com/sudoku-img?width=600&format=webp`
 
@@ -161,12 +181,15 @@ https://www.sudoku100.com/sudoku-img/medium
 ## 集成指南
 
 ### 直接引用
+
 ```html
 <img src="https://www.sudoku100.com/sudoku-img" alt="数独谜题">
 ```
-![直接引用示例](https://www.sudoku100.com/sudoku-img?width=400&format=png)
+
+![直接引用示例](https://www.sudoku100.com/sudoku-img?width=400\&format=png)
 
 ### 图片嵌入
+
 ```html
 <iframe
   src="https://www.sudoku100.com/embed/interactive"
@@ -178,6 +201,7 @@ https://www.sudoku100.com/sudoku-img/medium
 ```
 
 ### 交互嵌入
+
 ```html
 <iframe
   src="https://www.sudoku100.com/embed/interactive"
@@ -208,17 +232,17 @@ https://www.sudoku100.com/sudoku-img/medium
 
 ## 优势对比
 
-| 特性 | Sudoku100 API | 其他数独 API |
-|------|---------------|-------------|
-| 无需注册 | ✅ | ❌ |
-| 无需 API 密钥 | ✅ | ❌ |
-| 唯一解保证 | ✅ | ⚠️ |
-| 在线实时生成 | ✅ | ❌ |
-| 多格式支持 | ✅ | ⚠️ |
-| 自定义尺寸 | ✅ | ❌ |
-| 多语言支持 | ✅ | ❌ |
-| 6 级难度 | ✅ | ⚠️ |
-| 快速响应 | ✅ | ⚠️ |
+| 特性        | Sudoku100 API | 其他数独 API |
+| --------- | ------------- | -------- |
+| 无需注册      | ✅             | ❌        |
+| 无需 API 密钥 | ✅             | ❌        |
+| 唯一解保证     | ✅             | ⚠️       |
+| 在线实时生成    | ✅             | ❌        |
+| 多格式支持     | ✅             | ⚠️       |
+| 自定义尺寸     | ✅             | ❌        |
+| 多语言支持     | ✅             | ❌        |
+| 6 级难度     | ✅             | ⚠️       |
+| 快速响应      | ✅             | ⚠️       |
 
 ## 限制
 
@@ -233,26 +257,4 @@ MIT 许可证 - 可自由使用和修改
 ## 反馈
 
 如有问题或建议，请通过 GitHub Issues 提交。
-
-## GitHub 仓库设置
-
-### 1. 创建 GitHub 仓库
-- 登录 GitHub
-- 创建新仓库，命名为 `sudoku-api`
-- 选择 MIT 许可证
-
-### 2. 提交代码
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/sudoku100com-create/Sudoku-generate-API.git
-git push -u origin main
-```
-
-### 3. 启用 GitHub Pages（可选）
-- 在仓库设置中启用 GitHub Pages
-- 选择主分支作为源
-- 通过 `https://sudoku100com-create.github.io/Sudoku-generate-API` 访问演示页面
-
 
