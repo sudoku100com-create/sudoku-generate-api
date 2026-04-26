@@ -255,22 +255,4 @@ git push -u origin main
 - Select main branch as source
 - Access demo page at `https://sudoku100com-create.github.io/Sudoku-generate-API`
 
-## Promotion and Sharing
 
-1. **Share in Relevant Communities**
-   - Post in developer forums and communities
-   - Share on social media platforms
-   - Submit to API directories
-
-2. **Submit to Large Model Platforms**
-   - Submit Skill and MCP to relevant AI platforms
-   - Provide clear documentation for integration
-
-3. **Optimize Repository**
-   - Add relevant tags and descriptions
-   - Improve discoverability with proper keywords
-   - Maintain active development and updates
-
----
-
-🚀 **Let Sudoku be everywhere!**
