@@ -1,5 +1,7 @@
 # Sudoku API
 
+![Sudoku API](https://www.sudoku100.com/api?width=800&format=png)
+
 A public Sudoku generation API that requires no registration or API key, similar to picsum photos.
 
 ## Core Advantages
@@ -45,12 +47,23 @@ https://www.sudoku100.com/api/medium
 - **Features:** Real-time generation, unique solution guarantee
 - **Example:** `https://www.sudoku100.com/api`
 
+![Dynamic Sudoku](https://www.sudoku100.com/api?width=400&format=png)
+
 ### 2. Specified Difficulty
 - **URL:** `https://www.sudoku100.com/api/{difficulty}`
 - **Parameters:**
   - `difficulty`: Difficulty level (beginner, easy, medium, hard, expert, extreme)
 - **Features:** Precise difficulty control, suitable for users of different levels
 - **Example:** `https://www.sudoku100.com/api/hard`
+
+| Difficulty | Example |
+|------------|---------|
+| Beginner | ![Beginner](https://www.sudoku100.com/api/beginner?width=200&format=png) |
+| Easy | ![Easy](https://www.sudoku100.com/api/easy?width=200&format=png) |
+| Medium | ![Medium](https://www.sudoku100.com/api/medium?width=200&format=png) |
+| Hard | ![Hard](https://www.sudoku100.com/api/hard?width=200&format=png) |
+| Expert | ![Expert](https://www.sudoku100.com/api/expert?width=200&format=png) |
+| Extreme | ![Extreme](https://www.sudoku100.com/api/extreme?width=200&format=png) |
 
 ### 3. Custom Size & Format
 - **URL:** `https://www.sudoku100.com/api?width={width}&format={format}`
@@ -60,12 +73,16 @@ https://www.sudoku100.com/api/medium
 - **Features:** Customize the size and format of generated Sudoku
 - **Example:** `https://www.sudoku100.com/api?width=800&format=png`
 
+![Custom Size](https://www.sudoku100.com/api?width=600&format=png)
+
 ### 4. Get by ID
 - **URL:** `https://www.sudoku100.com/api/d/{id}`
 - **Parameters:**
   - `id`: Sudoku puzzle ID (1-10000)
 - **Features:** Get the same Sudoku puzzle by ID
 - **Example:** `https://www.sudoku100.com/api/d/238`
+
+![Puzzle ID 238](https://www.sudoku100.com/api/d/238?width=400&format=png)
 
 ## Large Language Model Application Examples
 
@@ -147,25 +164,30 @@ https://www.sudoku100.com/api/medium
 ```html
 <img src="https://www.sudoku100.com/api" alt="Sudoku Puzzle">
 ```
+![Direct Reference Example](https://www.sudoku100.com/api?width=400&format=png)
 
 ### With Solver Link
 ```html
 <div>
   <img src="https://www.sudoku100.com/api/easy" alt="Easy Sudoku">
-  <a href="https://www.sudoku100.com/api-solver" target="_blank">Solve this Sudoku</a>
+  <a href="https://www.sudoku100.com/sudoku-solver" target="_blank">Solve this Sudoku</a>
 </div>
 ```
+![With Solver Link](https://www.sudoku100.com/api/easy?width=400&format=png)
 
 ### iframe Embedding
 ```html
 <iframe
-  src="https://www.sudoku100.com/embed/interactive"
+  src="https://www.sudoku100.com/embed"
   width="800"
   height="600"
   style="border: none; overflow: hidden; border-radius: 6px;"
 >
 </iframe>
 ```
+
+**Live Preview:**
+<iframe src="https://www.sudoku100.com/embed" width="600" height="450" style="border: none; border-radius: 6px;"></iframe>
 
 ## Skill and MCP Integration
 

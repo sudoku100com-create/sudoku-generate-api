@@ -1,5 +1,7 @@
 # Sudoku API
 
+![Sudoku API](https://www.sudoku100.com/api?width=800&format=png)
+
 一个无需注册、无需 API 密钥的公共数独生成 API，类似于 picsum photos。
 
 ## 核心优势
@@ -45,12 +47,23 @@ https://www.sudoku100.com/api/medium
 - **特点:** 实时生成，唯一解保证
 - **示例:** `https://www.sudoku100.com/api`
 
+![动态数独](https://www.sudoku100.com/api?width=400&format=png)
+
 ### 2. 指定难度
 - **URL:** `https://www.sudoku100.com/api/{difficulty}`
 - **参数:**
   - `difficulty`: 难度级别 (beginner, easy, medium, hard, expert, extreme)
 - **特点:** 精确控制难度，适合不同水平的用户
 - **示例:** `https://www.sudoku100.com/api/hard`
+
+| 难度 | 示例 |
+|------|------|
+| 初学者 | ![初学者](https://www.sudoku100.com/api/beginner?width=200&format=png) |
+| 简单 | ![简单](https://www.sudoku100.com/api/easy?width=200&format=png) |
+| 中等 | ![中等](https://www.sudoku100.com/api/medium?width=200&format=png) |
+| 困难 | ![困难](https://www.sudoku100.com/api/hard?width=200&format=png) |
+| 专家 | ![专家](https://www.sudoku100.com/api/expert?width=200&format=png) |
+| 极端 | ![极端](https://www.sudoku100.com/api/extreme?width=200&format=png) |
 
 ### 3. 自定义尺寸和格式
 - **URL:** `https://www.sudoku100.com/api?width={width}&format={format}`
@@ -60,12 +73,16 @@ https://www.sudoku100.com/api/medium
 - **特点:** 自定义生成数独的尺寸和格式
 - **示例:** `https://www.sudoku100.com/api?width=800&format=png`
 
+![自定义尺寸](https://www.sudoku100.com/api?width=600&format=png)
+
 ### 4. 按 ID 获取
 - **URL:** `https://www.sudoku100.com/api/d/{id}`
 - **参数:**
   - `id`: 数独谜题 ID (1-10000)
 - **特点:** 通过 ID 获取相同的数独谜题
 - **示例:** `https://www.sudoku100.com/api/d/238`
+
+![谜题编号 238](https://www.sudoku100.com/api/d/238?width=400&format=png)
 
 ## 大模型应用示例
 
@@ -147,25 +164,30 @@ https://www.sudoku100.com/api/medium
 ```html
 <img src="https://www.sudoku100.com/api" alt="数独谜题">
 ```
+![直接引用示例](https://www.sudoku100.com/api?width=400&format=png)
 
 ### 带解题器链接
 ```html
 <div>
   <img src="https://www.sudoku100.com/api/easy" alt="简单数独">
-  <a href="https://www.sudoku100.com/api-solver" target="_blank">点击这里解题</a>
+  <a href="https://www.sudoku100.com/sudoku-solver" target="_blank">点击这里解题</a>
 </div>
 ```
+![带解题器链接](https://www.sudoku100.com/api/easy?width=400&format=png)
 
 ### iframe 嵌入
 ```html
 <iframe
-  src="https://www.sudoku100.com/embed/interactive"
+  src="https://www.sudoku100.com/embed"
   width="800"
   height="600"
   style="border: none; overflow: hidden; border-radius: 6px;"
 >
 </iframe>
 ```
+
+**在线预览:**
+<iframe src="https://www.sudoku100.com/embed" width="600" height="450" style="border: none; border-radius: 6px;"></iframe>
 
 ## Skill 和 MCP 集成
 
