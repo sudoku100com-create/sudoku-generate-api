@@ -4,17 +4,17 @@
 
 ### Basic Usage
 ```html
-<img src="https://www.sudoku100.com/api" alt="Sudoku Puzzle">
+<img src="https://www.sudoku100.com/sudoku-img" alt="Sudoku Puzzle">
 ```
 
 ### Specified Difficulty
 ```html
-<img src="https://www.sudoku100.com/api/hard" alt="Hard Sudoku">
+<img src="https://www.sudoku100.com/sudoku-img/hard" alt="Hard Sudoku">
 ```
 
 ### Custom Size and Format
 ```html
-<img src="https://www.sudoku100.com/api/hard/id/238/500.png" alt="Custom Sudoku">
+<img src="https://www.sudoku100.com/id/238?width=500&format=png" alt="Custom Sudoku">
 ```
 
 ## Website Integration
@@ -23,8 +23,8 @@
 ```html
 <div class="sudoku-container">
   <h3>Daily Sudoku Challenge</h3>
-  <img src="https://www.sudoku100.com/api/medium/id/100/600.png" alt="Daily Sudoku">
-  <a href="https://www.sudoku100.com/api-solver" target="_blank">
+  <img src="https://www.sudoku100.com/sudoku-img/medium" alt="Daily Sudoku">
+  <a href="https://www.sudoku100.com/sudoku-solver" target="_blank">
     Click here to solve
   </a>
 </div>
@@ -39,14 +39,14 @@
     <button data-difficulty="medium">Medium</button>
     <button data-difficulty="hard">Hard</button>
   </div>
-  <img id="sudoku-image" src="https://www.sudoku100.com/api" alt="Sudoku Puzzle">
+  <img id="sudoku-image" src="https://www.sudoku100.com/sudoku-img" alt="Sudoku Puzzle">
 </div>
 
 <script>
   document.querySelectorAll('.difficulty-buttons button').forEach(button => {
     button.addEventListener('click', function() {
       const difficulty = this.getAttribute('data-difficulty');
-      document.getElementById('sudoku-image').src = `https://www.sudoku100.com/api/${difficulty}/id/100/600.png`;
+      document.getElementById('sudoku-image').src = `https://www.sudoku100.com/sudoku-img/${difficulty}`;
     });
   });
 </script>
@@ -102,22 +102,20 @@ const SudokuApiMCP = require('./mcp/sudoku-api-mcp');
 function handleSudokuRequest(prompt) {
   const request = { prompt };
   const response = SudokuApiMCP.process(request);
-  
+
   // Generate API URL based on response
-  let url = 'https://www.sudoku100.com/api';
-  
-  if (response.action === 'generate_sudoku' && response.parameters.difficulty && response.parameters.difficulty !== 'random') {
-    url += `/${response.parameters.difficulty}`;
-  } else if (response.action === 'get_sudoku_by_id' && response.parameters.id) {
-    url += `/hard/id/${response.parameters.id}/500.png`;
-  } else if (response.action === 'customize_sudoku') {
-    const width = response.parameters.width || 500;
-    const format = response.parameters.format || 'png';
-    url += `/hard/id/238/${width}.${format}`;
-  } else {
-    url += '/generate';
-  }
-  
+    let url = 'https://www.sudoku100.com/sudoku-img';
+
+    if (response.action === 'generate_sudoku' && response.parameters.difficulty && response.parameters.difficulty !== 'random') {
+      url += `/${response.parameters.difficulty}`;
+    } else if (response.action === 'get_sudoku_by_id' && response.parameters.id) {
+      url = `https://www.sudoku100.com/id/${response.parameters.id}`;
+    } else if (response.action === 'customize_sudoku') {
+      const width = response.parameters.width || 500;
+      const format = response.parameters.format || 'png';
+      url = `https://www.sudoku100.com/sudoku-img?width=${width}&format=${format}`;
+    }
+
   return url;
 }
 
@@ -135,14 +133,14 @@ import UIKit
 
 class SudokuViewController: UIViewController {
     @IBOutlet weak var sudokuImageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSudoku()
     }
-    
+
     func loadSudoku() {
-        let url = URL(string: "https://www.sudoku100.com/api/hard/id/238/600.png")!
+        let url = URL(string: "https://www.sudoku100.com/sudoku-img/hard")!
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, error == nil else { return }
             DispatchQueue.main.async {
@@ -161,18 +159,18 @@ import com.squareup.picasso.Picasso;
 
 public class SudokuActivity extends AppCompatActivity {
     private ImageView sudokuImageView;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sudoku);
-        
+
         sudokuImageView = findViewById(R.id.sudoku_image);
         loadSudoku();
     }
-    
+
     private void loadSudoku() {
-        String url = "https://www.sudoku100.com/api/medium/id/100/600.png";
+        String url = "https://www.sudoku100.com/sudoku-img/medium";
         Picasso.get().load(url).into(sudokuImageView);
     }
 }
@@ -219,7 +217,7 @@ public class SudokuActivity extends AppCompatActivity {
 </head>
 <body>
     <h1>Daily Sudoku</h1>
-    <img src="https://www.sudoku100.com/api/medium/id/100/600.png"
+    <img src="https://www.sudoku100.com/sudoku-img?difficulty=medium"
          alt="Medium Difficulty Sudoku"
          loading="lazy">
 </body>
@@ -231,37 +229,37 @@ public class SudokuActivity extends AppCompatActivity {
 ```markdown
 # Sudoku Puzzle
 
-![Sudoku](https://www.sudoku100.com/api/easy/id/238/500.png)
+![Sudoku](https://www.sudoku100.com/sudoku-img?difficulty=easy)
 ```
 
 ### 3. Large Language Model Prompts
 
 **Prompt:** "Generate a random Sudoku puzzle"
-**Result:** Use `https://www.sudoku100.com/api`
+**Result:** Use `https://www.sudoku100.com/sudoku-img`
 
 **Prompt:** "Generate an expert difficulty Sudoku"
-**Result:** Use `https://www.sudoku100.com/api/expert`
+**Result:** Use `https://www.sudoku100.com/sudoku-img/expert`
 
 **Prompt:** "Show me puzzle number 500 in 800px width"
-**Result:** Use `https://www.sudoku100.com/api/hard/id/500/800.png`
+**Result:** Use `https://www.sudoku100.com/id/500?width=800`
 
 ## URL Patterns
 
 ### Dynamic Generation
 ```
-https://www.sudoku100.com/api
+https://www.sudoku100.com/sudoku-img
 ```
 Generates a new Sudoku puzzle with each request.
 
 ### Static by ID
 ```
-https://www.sudoku100.com/api/{difficulty}/id/{id}/{width}.{format}
+https://www.sudoku100.com/id/{id}?width={width}&format={format}
 ```
 
 ### Examples:
-- `https://www.sudoku100.com/api/easy/id/238/720.png`
-- `https://www.sudoku100.com/api/hard/id/500/800.png`
-- `https://www.sudoku100.com/api/medium/id/100/600.jpg`
+- `https://www.sudoku100.com/sudoku-img/easy`
+- `https://www.sudoku100.com/id/500?width=800&format=png`
+- `https://www.sudoku100.com/sudoku-img/medium?width=600&format=webp`
 
 ## Difficulty Levels
 

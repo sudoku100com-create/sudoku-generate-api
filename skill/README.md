@@ -126,7 +126,7 @@ await SudokuApiSkill.invoke({ action: "list_difficulties" });
 {
   success: true,
   data: {
-    url: "https://www.sudoku100.com/sudoku/hard/id/238/800.png",
+    url: "https://www.sudoku100.com/sudoku-img/hard",
     id: 238,
     difficulty: "hard",
     width: 800,
@@ -195,9 +195,9 @@ const tool = new langchain.tools.Tool({
 
 ## URL Patterns
 
-- Random: `https://www.sudoku100.com/sudoku/generate`
-- By difficulty: `https://www.sudoku100.com/sudoku/{difficulty}`
-- By ID: `https://www.sudoku100.com/sudoku/{difficulty}/id/{id}/{width}.{format}`
+- Random: `https://www.sudoku100.com/sudoku-img`
+- By difficulty: `https://www.sudoku100.com/sudoku-img/{difficulty}`
+- By ID: `https://www.sudoku100.com/id/{id}?width={width}&format={format}`
 
 ## Difficulty Levels
 

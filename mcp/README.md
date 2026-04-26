@@ -43,9 +43,9 @@ console.log(response);
 
 ## API Templates
 
-- **Generate**: `https://www.sudoku100.com/sudoku/{difficulty}` or `https://www.sudoku100.com/sudoku/generate`
-- **By ID**: `https://www.sudoku100.com/sudoku/{difficulty}/id/{id}/{width}.{format}`
-- **Custom**: `https://www.sudoku100.com/sudoku/{difficulty}?width={width}&format={format}`
+- **Generate**: `https://www.sudoku100.com/sudoku-img` or `https://www.sudoku100.com/sudoku-img/{difficulty}`
+- **By ID**: `https://www.sudoku100.com/id/{id}?width={width}&format={format}`
+- **Custom**: `https://www.sudoku100.com/sudoku-img?width={width}&format={format}`
 
 ## Context Examples
 

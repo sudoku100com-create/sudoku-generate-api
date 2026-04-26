@@ -43,9 +43,9 @@ console.log(response);
 
 ## API 模板
 
-- **生成**: `https://www.sudoku100.com/sudoku/{difficulty}` 或 `https://www.sudoku100.com/sudoku/generate`
-- **按 ID**: `https://www.sudoku100.com/sudoku/{difficulty}/id/{id}/{width}.{format}`
-- **自定义**: `https://www.sudoku100.com/sudoku/{difficulty}?width={width}&format={format}`
+- **生成**: `https://www.sudoku100.com/sudoku-img` 或 `https://www.sudoku100.com/sudoku-img/{difficulty}`
+- **按 ID**: `https://www.sudoku100.com/id/{id}?width={width}&format={format}`
+- **自定义**: `https://www.sudoku100.com/sudoku-img?width={width}&format={format}`
 
 ## 上下文示例
 

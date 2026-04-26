@@ -1,6 +1,6 @@
 # Sudoku API
 
-![Sudoku API](https://www.sudoku100.com/api?width=800&format=png)
+![Sudoku API](https://www.sudoku100.com/sudoku-img?width=800&format=png)
 
 A public Sudoku generation API that requires no registration or API key, similar to picsum photos.
 
@@ -26,7 +26,7 @@ A public Sudoku generation API that requires no registration or API key, similar
 
 ### Basic Usage
 ```
-https://www.sudoku100.com/api
+https://www.sudoku100.com/sudoku-img
 ```
 
 ### Large Language Model Reference Example
@@ -36,95 +36,95 @@ https://www.sudoku100.com/api
 
 **API Call:**
 ```
-https://www.sudoku100.com/api/medium
+https://www.sudoku100.com/sudoku-img/medium
 ```
 
 ## API Endpoints
 
 ### 1. Dynamic Sudoku
-- **URL:** `https://www.sudoku100.com/api`
+- **URL:** `https://www.sudoku100.com/sudoku-img`
 - **Description:** Generate Sudoku puzzles with random difficulty
 - **Features:** Real-time generation, unique solution guarantee
-- **Example:** `https://www.sudoku100.com/api`
+- **Example:** `https://www.sudoku100.com/sudoku-img`
 
-![Dynamic Sudoku](https://www.sudoku100.com/api?width=400&format=png)
+![Dynamic Sudoku](https://www.sudoku100.com/sudoku-img?width=400&format=png)
 
 ### 2. Specified Difficulty
-- **URL:** `https://www.sudoku100.com/api/{difficulty}`
+- **URL:** `https://www.sudoku100.com/sudoku-img/{difficulty}`
 - **Parameters:**
   - `difficulty`: Difficulty level (beginner, easy, medium, hard, expert, extreme)
 - **Features:** Precise difficulty control, suitable for users of different levels
-- **Example:** `https://www.sudoku100.com/api/hard`
+- **Example:** `https://www.sudoku100.com/sudoku-img/hard`
 
 | Difficulty | Example |
 |------------|---------|
-| Beginner | ![Beginner](https://www.sudoku100.com/api/beginner?width=200&format=png) |
-| Easy | ![Easy](https://www.sudoku100.com/api/easy?width=200&format=png) |
-| Medium | ![Medium](https://www.sudoku100.com/api/medium?width=200&format=png) |
-| Hard | ![Hard](https://www.sudoku100.com/api/hard?width=200&format=png) |
-| Expert | ![Expert](https://www.sudoku100.com/api/expert?width=200&format=png) |
-| Extreme | ![Extreme](https://www.sudoku100.com/api/extreme?width=200&format=png) |
+| Beginner | ![Beginner](https://www.sudoku100.com/sudoku-img/beginner?width=200&format=png) |
+| Easy | ![Easy](https://www.sudoku100.com/sudoku-img/easy?width=200&format=png) |
+| Medium | ![Medium](https://www.sudoku100.com/sudoku-img/medium?width=200&format=png) |
+| Hard | ![Hard](https://www.sudoku100.com/sudoku-img/hard?width=200&format=png) |
+| Expert | ![Expert](https://www.sudoku100.com/sudoku-img/expert?width=200&format=png) |
+| Extreme | ![Extreme](https://www.sudoku100.com/sudoku-img/extreme?width=200&format=png) |
 
 ### 3. Custom Size & Format
-- **URL:** `https://www.sudoku100.com/api?width={width}&format={format}`
+- **URL:** `https://www.sudoku100.com/sudoku-img?width={width}&format={format}`
 - **Parameters:**
   - `width`: Image width (100-1000)
   - `format`: Image format (png, webp, svg, jpg)
 - **Features:** Customize the size and format of generated Sudoku
-- **Example:** `https://www.sudoku100.com/api?width=800&format=png`
+- **Example:** `https://www.sudoku100.com/sudoku-img?width=800&format=png`
 
-![Custom Size](https://www.sudoku100.com/api?width=600&format=png)
+![Custom Size](https://www.sudoku100.com/sudoku-img?width=600&format=png)
 
 ### 4. Get by ID
-- **URL:** `https://www.sudoku100.com/api/d/{id}`
+- **URL:** `https://www.sudoku100.com/id/{id}`
 - **Parameters:**
   - `id`: Sudoku puzzle ID (1-10000)
 - **Features:** Get the same Sudoku puzzle by ID
-- **Example:** `https://www.sudoku100.com/api/d/238`
+- **Example:** `https://www.sudoku100.com/id/238`
 
-![Puzzle ID 238](https://www.sudoku100.com/api/d/238?width=400&format=png)
+![Puzzle ID 238](https://www.sudoku100.com/id/238?width=400&format=png)
 
 ## Large Language Model Application Examples
 
 ### Example 1: Random Sudoku
 **Prompt:** "Generate a random Sudoku puzzle"
-**API Call:** `https://www.sudoku100.com/api`
+**API Call:** `https://www.sudoku100.com/sudoku-img`
 
 ### Example 2: Expert Level
 **Prompt:** "I need an expert-level Sudoku for today's challenge"
-**API Call:** `https://www.sudoku100.com/api/expert`
+**API Call:** `https://www.sudoku100.com/sudoku-img/expert`
 
 ### Example 3: Beginner Friendly
 **Prompt:** "My daughter is 8 years old, show her an easy Sudoku"
-**API Call:** `https://www.sudoku100.com/api/easy`
+**API Call:** `https://www.sudoku100.com/sudoku-img/easy`
 
 ### Example 4: Medium Difficulty
 **Prompt:** "Give me a medium difficulty Sudoku to pass the time"
-**API Call:** `https://www.sudoku100.com/api/medium`
+**API Call:** `https://www.sudoku100.com/sudoku-img/medium`
 
 ### Example 5: Hard Challenge
 **Prompt:** "I want a hard Sudoku puzzle that will take me hours to solve"
-**API Call:** `https://www.sudoku100.com/api/hard`
+**API Call:** `https://www.sudoku100.com/sudoku-img/hard`
 
 ### Example 6: Custom PNG Size
 **Prompt:** "I need a 1000px wide PNG Sudoku for my website hero section"
-**API Call:** `https://www.sudoku100.com/api?width=1000&format=png`
+**API Call:** `https://www.sudoku100.com/sudoku-img?width=1000&format=png`
 
 ### Example 7: SVG Format
 **Prompt:** "Generate a vector SVG Sudoku for my design project"
-**API Call:** `https://www.sudoku100.com/api?width=500&format=svg`
+**API Call:** `https://www.sudoku100.com/sudoku-img?width=500&format=svg`
 
 ### Example 8: Extreme Challenge
 **Prompt:** "Only the most extreme Sudoku will do, I'm a speedrunner"
-**API Call:** `https://www.sudoku100.com/api/extreme`
+**API Call:** `https://www.sudoku100.com/sudoku-img/extreme`
 
 ### Example 9: Specific Puzzle ID
 **Prompt:** "Load puzzle number 500, my friend solved it last week"
-**API Call:** `https://www.sudoku100.com/api/d/500`
+**API Call:** `https://www.sudoku100.com/id/500`
 
 ### Example 10: Embed Interactive Game
 **Prompt:** "Add an interactive Sudoku game to my educational website"
-**API Call:** `<iframe src="https://www.sudoku100.com/embed"></iframe>`
+**API Call:** `<iframe src="https://www.sudoku100.com/embed/interactive"></iframe>`
 
 ### Example 11: With Solution
 **Prompt:** "Generate a Sudoku and show me the solution so I can check my answers"
@@ -132,15 +132,15 @@ https://www.sudoku100.com/api/medium
 
 ### Example 12: Print-Friendly
 **Prompt:** "Generate a high-resolution Sudoku I can print out for my morning commute"
-**API Call:** `https://www.sudoku100.com/api?width=800&format=png`
+**API Call:** `https://www.sudoku100.com/sudoku-img?width=800&format=png`
 
 ### Example 13: Daily Challenge
 **Prompt:** "Give me today's daily Sudoku challenge at medium difficulty"
-**API Call:** `https://www.sudoku100.com/api/medium`
+**API Call:** `https://www.sudoku100.com/sudoku-img/medium`
 
 ### Example 14: WebP for Performance
 **Prompt:** "I need a lightweight WebP format Sudoku for fast loading"
-**API Call:** `https://www.sudoku100.com/api?width=600&format=webp`
+**API Call:** `https://www.sudoku100.com/sudoku-img?width=600&format=webp`
 
 ## Algorithm Details
 
@@ -162,23 +162,14 @@ https://www.sudoku100.com/api/medium
 
 ### Direct Reference
 ```html
-<img src="https://www.sudoku100.com/api" alt="Sudoku Puzzle">
+<img src="https://www.sudoku100.com/sudoku-img" alt="Sudoku Puzzle">
 ```
-![Direct Reference Example](https://www.sudoku100.com/api?width=400&format=png)
+![Direct Reference Example](https://www.sudoku100.com/sudoku-img?width=400&format=png)
 
-### With Solver Link
-```html
-<div>
-  <img src="https://www.sudoku100.com/api/easy" alt="Easy Sudoku">
-  <a href="https://www.sudoku100.com/sudoku-solver" target="_blank">Solve this Sudoku</a>
-</div>
-```
-![With Solver Link](https://www.sudoku100.com/api/easy?width=400&format=png)
-
-### iframe Embedding
+### Image Embed
 ```html
 <iframe
-  src="https://www.sudoku100.com/embed"
+  src="https://www.sudoku100.com/embed/interactive"
   width="800"
   height="600"
   style="border: none; overflow: hidden; border-radius: 6px;"
@@ -186,8 +177,16 @@ https://www.sudoku100.com/api/medium
 </iframe>
 ```
 
-**Live Preview:**
-<iframe src="https://www.sudoku100.com/embed" width="600" height="450" style="border: none; border-radius: 6px;"></iframe>
+### Interactive Embed
+```html
+<iframe
+  src="https://www.sudoku100.com/embed/interactive"
+  width="800"
+  height="600"
+  style="border: none; overflow: hidden; border-radius: 6px;"
+>
+</iframe>
+```
 
 ## Skill and MCP Integration
 

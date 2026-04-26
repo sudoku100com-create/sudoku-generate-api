@@ -4,17 +4,17 @@
 
 ### 基本用法
 ```html
-<img src="https://www.sudoku100.com/api" alt="数独谜题">
+<img src="https://www.sudoku100.com/sudoku-img" alt="数独谜题">
 ```
 
 ### 指定难度
 ```html
-<img src="https://www.sudoku100.com/api/hard" alt="困难数独">
+<img src="https://www.sudoku100.com/sudoku-img/hard" alt="困难数独">
 ```
 
 ### 自定义尺寸和格式
 ```html
-<img src="https://www.sudoku100.com/api/hard/id/238/500.png" alt="自定义数独">
+<img src="https://www.sudoku100.com/id/238?width=500&format=png" alt="自定义数独">
 ```
 
 ## 网站集成
@@ -23,8 +23,8 @@
 ```html
 <div class="sudoku-container">
   <h3>每日数独挑战</h3>
-  <img src="https://www.sudoku100.com/api/medium/id/100/600.png" alt="每日数独">
-  <a href="https://www.sudoku100.com/api-solver" target="_blank">
+  <img src="https://www.sudoku100.com/sudoku-img/medium" alt="每日数独">
+  <a href="https://www.sudoku100.com/sudoku-solver" target="_blank">
     点击这里解题
   </a>
 </div>
@@ -39,14 +39,14 @@
     <button data-difficulty="medium">中等</button>
     <button data-difficulty="hard">困难</button>
   </div>
-  <img id="sudoku-image" src="https://www.sudoku100.com/api" alt="数独谜题">
+  <img id="sudoku-image" src="https://www.sudoku100.com/sudoku-img" alt="数独谜题">
 </div>
 
 <script>
   document.querySelectorAll('.difficulty-buttons button').forEach(button => {
     button.addEventListener('click', function() {
       const difficulty = this.getAttribute('data-difficulty');
-      document.getElementById('sudoku-image').src = `https://www.sudoku100.com/api/${difficulty}/id/100/600.png`;
+      document.getElementById('sudoku-image').src = `https://www.sudoku100.com/sudoku-img/${difficulty}`;
     });
   });
 </script>
@@ -94,7 +94,7 @@ generateSudoku('hard').then(url => {
 });
 ```
 
-### 使用 MCP
+### Using MCP
 ```javascript
 const SudokuApiMCP = require('./mcp/sudoku-api-mcp');
 
@@ -104,19 +104,17 @@ function handleSudokuRequest(prompt) {
   const response = SudokuApiMCP.process(request);
 
   // 根据响应生成 API URL
-  let url = 'https://www.sudoku100.com/api';
+    let url = 'https://www.sudoku100.com/sudoku-img';
 
-  if (response.action === 'generate_sudoku' && response.parameters.difficulty && response.parameters.difficulty !== 'random') {
-    url += `/${response.parameters.difficulty}`;
-  } else if (response.action === 'get_sudoku_by_id' && response.parameters.id) {
-    url += `/hard/id/${response.parameters.id}/500.png`;
-  } else if (response.action === 'customize_sudoku') {
-    const width = response.parameters.width || 500;
-    const format = response.parameters.format || 'png';
-    url += `/hard/id/238/${width}.${format}`;
-  } else {
-    url += '/generate';
-  }
+    if (response.action === 'generate_sudoku' && response.parameters.difficulty && response.parameters.difficulty !== 'random') {
+      url += `/${response.parameters.difficulty}`;
+    } else if (response.action === 'get_sudoku_by_id' && response.parameters.id) {
+      url = `https://www.sudoku100.com/id/${response.parameters.id}`;
+    } else if (response.action === 'customize_sudoku') {
+      const width = response.parameters.width || 500;
+      const format = response.parameters.format || 'png';
+      url = `https://www.sudoku100.com/sudoku-img?width=${width}&format=${format}`;
+    }
 
   return url;
 }
@@ -142,7 +140,7 @@ class SudokuViewController: UIViewController {
     }
 
     func loadSudoku() {
-        let url = URL(string: "https://www.sudoku100.com/api/hard/id/238/600.png")!
+        let url = URL(string: "https://www.sudoku100.com/sudoku-img/hard")!
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, error == nil else { return }
             DispatchQueue.main.async {
@@ -172,7 +170,7 @@ public class SudokuActivity extends AppCompatActivity {
     }
 
     private void loadSudoku() {
-        String url = "https://www.sudoku100.com/api/medium/id/100/600.png";
+        String url = "https://www.sudoku100.com/sudoku-img/medium";
         Picasso.get().load(url).into(sudokuImageView);
     }
 }
@@ -211,19 +209,19 @@ public class SudokuActivity extends AppCompatActivity {
 
 ### 动态生成
 ```
-https://www.sudoku100.com/api
+https://www.sudoku100.com/sudoku-img
 ```
 每次请求生成一个新的数独谜题。
 
 ### 按 ID 获取
 ```
-https://www.sudoku100.com/api/{difficulty}/id/{id}/{width}.{format}
+https://www.sudoku100.com/id/{id}?width={width}&format={format}
 ```
 
 ### 示例：
-- `https://www.sudoku100.com/api/easy/id/238/720.png`
-- `https://www.sudoku100.com/api/hard/id/500/800.png`
-- `https://www.sudoku100.com/api/medium/id/100/600.jpg`
+- `https://www.sudoku100.com/sudoku-img?difficulty=easy`
+- `https://www.sudoku100.com/id/500?width=800&format=png`
+- `https://www.sudoku100.com/sudoku-img?difficulty=medium&width=600&format=webp`
 
 ## 难度级别
 
