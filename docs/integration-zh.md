@@ -54,7 +54,23 @@
 
 ## iframe 嵌入
 
-### 基本嵌入
+### 图片嵌入
+```html
+<iframe
+  src="https://www.sudoku100.com/sudoku-img"
+  width="400"
+  height="400"
+  style="border: none; overflow: hidden;"
+>
+</iframe>
+```
+
+**说明：**
+- 可以直接将数独图片嵌入到您的网页中
+- 支持自定义尺寸和格式参数（例如 `?width=500&format=png`）
+- 适用于博客、文档、教育平台等场景
+
+### 交互式游戏嵌入
 ```html
 <iframe
   src="https://www.sudoku100.com/embed/interactive"
@@ -64,6 +80,11 @@
 >
 </iframe>
 ```
+
+**说明：**
+- 嵌入完整的可交互数独游戏
+- 用户可以直接在您的网站上玩数独
+- 支持难度选择、数字输入、提示等功能
 
 ### 响应式嵌入
 ```html

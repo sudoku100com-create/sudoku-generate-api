@@ -54,7 +54,23 @@
 
 ## iframe Embedding
 
-### Basic Embedding
+### Image Embed
+```html
+<iframe
+  src="https://www.sudoku100.com/sudoku-img"
+  width="400"
+  height="400"
+  style="border: none; overflow: hidden;"
+>
+</iframe>
+```
+
+**Notes:**
+- Embed Sudoku images directly into your web pages
+- Supports custom size and format parameters (e.g., `?width=500&format=png`)
+- Suitable for blogs, documentation, educational platforms
+
+### Interactive Game Embed
 ```html
 <iframe
   src="https://www.sudoku100.com/embed/interactive"
@@ -64,6 +80,11 @@
 >
 </iframe>
 ```
+
+**Notes:**
+- Embed a complete interactive Sudoku game
+- Users can play directly on your website
+- Supports difficulty selection, number input, hints, and more
 
 ### Responsive Embedding
 ```html

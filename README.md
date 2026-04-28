@@ -192,13 +192,20 @@ https://www.sudoku100.com/sudoku-img/medium
 
 ```html
 <iframe
-  src="https://www.sudoku100.com/embed/interactive"
-  width="800"
-  height="600"
-  style="border: none; overflow: hidden; border-radius: 6px;"
+  src="https://www.sudoku100.com/sudoku-img"
+  width="400"
+  height="400"
+  style="border: none; overflow: hidden;"
 >
 </iframe>
 ```
+
+![Image Embed Example](https://www.sudoku100.com/sudoku-img?width=400&format=png)
+
+**Notes:**
+- You can embed Sudoku images directly into your web pages
+- Supports custom size and format parameters
+- Suitable for blogs, documentation, educational platforms, etc.
 
 ### Interactive Embed
 
@@ -211,6 +218,14 @@ https://www.sudoku100.com/sudoku-img/medium
 >
 </iframe>
 ```
+
+![Interactive Embed Example](https://www.sudoku100.com/sudoku-img?width=400&format=png)
+
+**Notes:**
+- Embed a complete interactive Sudoku game
+- Users can play Sudoku directly on your website
+- Supports difficulty selection, number input, hints, and more
+- Suitable for educational websites, gaming platforms, entertainment apps, etc.
 
 ## Skill and MCP Integration
 

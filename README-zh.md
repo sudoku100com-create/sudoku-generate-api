@@ -192,13 +192,20 @@ https://www.sudoku100.com/sudoku-img/medium
 
 ```html
 <iframe
-  src="https://www.sudoku100.com/embed/interactive"
-  width="800"
-  height="600"
-  style="border: none; overflow: hidden; border-radius: 6px;"
+  src="https://www.sudoku100.com/sudoku-img"
+  width="400"
+  height="400"
+  style="border: none; overflow: hidden;"
 >
 </iframe>
 ```
+
+![图片嵌入示例](https://www.sudoku100.com/sudoku-img?width=400&format=png)
+
+**说明：**
+- 可以直接嵌入数独图片到您的网页中
+- 支持自定义尺寸和格式参数
+- 适用于博客、文档、教育平台等场景
 
 ### 交互嵌入
 
@@ -211,6 +218,14 @@ https://www.sudoku100.com/sudoku-img/medium
 >
 </iframe>
 ```
+
+![交互嵌入示例](https://www.sudoku100.com/sudoku-img?width=400&format=png)
+
+**说明：**
+- 嵌入完整的可交互数独游戏
+- 用户可以直接在您的网页上玩数独
+- 支持难度选择、数字输入、提示等功能
+- 适用于教育网站、游戏平台、娱乐应用等场景
 
 ## Skill 和 MCP 集成
 

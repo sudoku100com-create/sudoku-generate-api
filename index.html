@@ -599,15 +599,17 @@
 
     <section class="embed-section">
         <div class="container">
-            <h2 class="section-heading" data-lang-en="Interactive Embed" data-lang-zh="交互式嵌入">Interactive Embed</h2>
+            <h2 class="section-heading" data-lang-en="Embed Options" data-lang-zh="嵌入选项">Embed Options</h2>
             <div class="embed-content">
+                <h3 data-lang-en="Interactive Game Embed" data-lang-zh="交互式游戏嵌入" style="font-size: 24px; margin-bottom: 16px; color: var(--color-off-black);">Interactive Game Embed</h3>
                 <div class="embed-preview">
                     <iframe src="https://www.sudoku100.com/embed/interactive" width="100%" height="500" style="border: none; border-radius: 0;"></iframe>
                 </div>
                 <div class="embed-code">
                     <div class="code-label" data-lang-en="Embed Code" data-lang-zh="嵌入代码">Embed Code</div>
-                    <code>&lt;iframe src="https://www.sudoku100.com/embed/interactive" width="800" height="600"&gt;&lt;/iframe&gt;</code>
+                    <code>&lt;iframe src="https://www.sudoku100.com/embed/interactive" width="800" height="600" style="border: none; overflow: hidden; border-radius: 6px;"&gt;&lt;/iframe&gt;</code>
                 </div>
+                <p style="margin-top: 16px; font-size: 14px; color: var(--color-black-60);" data-lang-en="Users can play Sudoku directly on your website with full interactive features." data-lang-zh="用户可以直接在您的网站上玩数独，支持完整的交互功能。">Users can play Sudoku directly on your website with full interactive features.</p>
             </div>
         </div>
     </section>
@@ -656,6 +658,18 @@
             <div class="endpoint">
                 <div class="endpoint-header">
                     <span class="method">GET</span>
+                    <h3 data-lang-en="Image Embed" data-lang-zh="图片嵌入">Image Embed</h3>
+                </div>
+                <code>&lt;iframe src="https://www.sudoku100.com/sudoku-img" width="400" height="400" style="border: none; overflow: hidden;"&gt;&lt;/iframe&gt;</code>
+                <p data-lang-en="Embed Sudoku images directly into your web pages using iframe." data-lang-zh="使用 iframe 将数独图片直接嵌入到您的网页中。">Embed Sudoku images directly into your web pages using iframe.</p>
+                <div class="params">
+                    <span class="param" data-lang-en="Supports all sudoku-img parameters" data-lang-zh="支持所有 sudoku-img 参数">Supports all sudoku-img parameters</span>
+                </div>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-header">
+                    <span class="method">GET</span>
                     <h3 data-lang-en="Interactive Embed" data-lang-zh="交互式嵌入">Interactive Embed</h3>
                 </div>
                 <code>https://www.sudoku100.com/embed/interactive</code>
@@ -668,14 +682,14 @@
             <div class="endpoint">
                 <div class="endpoint-header">
                     <span class="method">GET</span>
-                    <h3 data-lang-en="Image + Solution Embed" data-lang-zh="图片+解题方案嵌入">Image + Solution Embed</h3>
+                    <h3 data-lang-en="Static Sudoku by ID" data-lang-zh="通过ID获取静态数独">Static Sudoku by ID</h3>
                 </div>
-                <code>https://www.sudoku100.com/sudoku-solver?id={id}</code>
-                <p data-lang-en="Embed a page showing both the Sudoku image and its solution for verification." data-lang-zh="嵌入一个同时显示数独图片和解题方案的页面，便于验证。">Embed a page showing both the Sudoku image and its solution for verification.</p>
+                <code>https://www.sudoku100.com/id/{id}</code>
+                <p data-lang-en="Get a specific Sudoku puzzle image by ID, ensuring the same puzzle every time." data-lang-zh="通过ID获取特定的数独图片，确保每次都获取相同的谜题。">Get a specific Sudoku puzzle image by ID, ensuring the same puzzle every time.</p>
                 <div class="params">
                     <span class="param">id: 1-10000</span>
-                    <span class="param">difficulty: beginner | easy | medium | hard | expert | extreme</span>
                     <span class="param">width: 100-1000</span>
+                    <span class="param">format: png | webp | svg | jpg</span>
                 </div>
             </div>
         </div>
